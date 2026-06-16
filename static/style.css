@@ -324,3 +324,54 @@ a {
     max-width: 600px;
     margin: 0 auto;
 }
+
+/* ==========================================
+   8. ESTILOS MIGRADOS DO INLINE
+   ========================================== */
+
+/* achei.html */
+.titulo-encontro {
+    color: #ff9800;
+}
+
+.nome-encontro {
+    color: #ff9800;
+}
+
+.imagem-encontro {
+    max-width: 250px;
+    border-radius: 10px;
+    margin: 15px 0;
+    border: 4px solid #ff9800;
+}
+
+/* card.html */
+.container-card-unico {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.acoes-card {
+    text-align: center;
+}
+
+/* colecao.html */
+.titulo-colecao {
+    color: #ffe066;
+}
+
+.card-colecao {
+    background: linear-gradient(to bottom, #ffe066, #fff);
+}
+
+.clique-aqui {
+    margin: 0;
+    font-weight: bold;
+    color: #111;
+}
+
+.rodape-colecao {
+    text-align: center;
+    margin-top: 30px;
+}

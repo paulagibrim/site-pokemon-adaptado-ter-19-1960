@@ -2,7 +2,7 @@
 
 {% block content %}
     <div class="cabecalho-colecao">
-        <h2 style="color: #ffe066;">Sua Mochila (A Pokédex)</h2>
+        <h2 class="titulo-colecao">Sua Mochila (A Pokédex)</h2>
         <p>Clique em uma carta para ver os detalhes completos!</p>
     </div>
 
@@ -10,7 +10,7 @@
         {% for pokemon in lista_pokemons %}
             <a href="/personagem/{{ pokemon.nome }}" class="link-card-mochila">
                 
-                <div class="card mini-card" style="background: linear-gradient(to bottom, #ffe066, #fff);">
+                <div class="card mini-card card-colecao">
                     <div class="card-header">
                         <span class="name">{{ pokemon.nome }}</span>
                         <span class="hp">{{ pokemon.hp }}</span>
@@ -21,7 +21,7 @@
                     </div>
                     
                     <div class="description">
-                        <p class="clique-aqui" style="margin: 0; font-weight: bold; color: #111;">🔍 Clique para expandir</p>
+                        <p class="clique-aqui">🔍 Clique para expandir</p>
                     </div>
                 </div>
                 
@@ -29,7 +29,7 @@
         {% endfor %}
     </div>
 
-    <div style="text-align: center; margin-top: 30px;">
+    <div class="rodape-colecao">
         <a href="/" class="link-voltar">⬅️ Voltar para o Início</a>
     </div>
 {% endblock %}

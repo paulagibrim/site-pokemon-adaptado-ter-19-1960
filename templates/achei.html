@@ -2,13 +2,13 @@
 
 {% block content %}
     <div class="encontro-selvagem">
-        <h2 style="color: #ff9800;">Você andou pelo matinho alto...</h2>
+        <h2 class="titulo-encontro">Você andou pelo matinho alto...</h2>
         
         <p>E de repente, um personagem selvagem apareceu!</p>
         
-        <h3>Você encontrou um: <strong style="color: #ff9800;">{{ personagem_sorteado.nome }}</strong>!</h3>
+        <h3>Você encontrou um: <strong class="nome-encontro">{{ personagem_sorteado.nome }}</strong>!</h3>
 
-        <img src="{{ personagem_sorteado.img }}" alt="{{ personagem_sorteado.nome }}" style="max-width: 250px; border-radius: 10px; margin: 15px 0; border: 4px solid #ff9800;">
+        <img src="{{ personagem_sorteado.img }}" alt="{{ personagem_sorteado.nome }}" class="imagem-encontro">
 
         <br><br>
         
