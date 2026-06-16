@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Cadastrar Novo Personagem</h2>
+    <p>Preencha os dados abaixo para registrar sua nova descoberta:</p>
+
+    <form action="/novo" method="POST" class="formulario-personagem">
+        <label for="nome">Nome do Personagem:</label><br>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="hp">Pontos de Vida (ex: ⚡ 70 HP):</label><br>
+        <input type="text" id="hp" name="hp" required><br><br>
+
+        <label for="url">Link da Imagem:</label><br>
+        <input type="url" id="url" name="url" required><br><br>
+
+        <div class="grupo-ataque">
+            <label for="ataque1">Ataque 1 (Nome):</label>
+            <input type="text" id="ataque1" name="ataque1" required>
+            <label for="dano1">Dano:</label>
+            <input type="text" id="dano1" name="dano1" required>
+        </div><br>
+
+        <div class="grupo-ataque">
+            <label for="ataque2">Ataque 2 (Nome):</label>
+            <input type="text" id="ataque2" name="ataque2" required>
+            <label for="dano2">Dano:</label>
+            <input type="text" id="dano2" name="dano2" required>
+        </div><br>
+
+        <label for="descricao">Descrição Curta:</label><br>
+        <textarea id="descricao" name="descricao" rows="3" required></textarea><br><br>
+
+        <button type="submit" class="btn-salvar">Capturar e Salvar!</button>
+    </form>
+
+    <br>
+    <a href="/" class="link-voltar">⬅️ Voltar para o Início</a>
+{% endblock %}

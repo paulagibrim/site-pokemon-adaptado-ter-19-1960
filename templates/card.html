@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+    
+    {% if mensagem_sucesso %}
+        <div class="alerta-sucesso">
+            {{ mensagem_sucesso }}
+        </div>
+    {% endif %}
+
+    <div style="display: flex; justify-content: center; margin: 40px 0;">
+
+        <div class="card">
+            <div class="card-header">
+                <span class="name">{{ personagem.nome }}</span>
+                <span class="hp">{{ personagem.hp }}</span>
+            </div>
+
+            <div class="image-box">
+                <img src="{{ personagem.img }}" alt="{{ personagem.nome }}">
+            </div>
+
+            <div class="attack">
+                <span class="attack-name">{{ personagem.atk1 }}</span>
+                <span class="damage">{{ personagem.dano1 }}</span>
+            </div>
+
+            <div class="attack">
+                <span class="attack-name">{{ personagem.atk2 }}</span>
+                <span class="damage">{{ personagem.dano2 }}</span>
+            </div>
+
+            <div class="description">
+                {{ personagem.desc }}
+            </div>
+        </div>
+
+    </div>
+
+    <div class="acoes-card" style="text-align: center;">
+        <a href="/cadastro" class="btn-navegacao">➕ Cadastrar outro</a>
+        <a href="/colecao" class="btn-navegacao">🎒 Ver Coleção</a>
+        <a href="/" class="btn-navegacao">🏠 Início</a>
+    </div>
+{% endblock %}

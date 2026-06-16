@@ -1,0 +1,326 @@
+/* ==========================================
+   1. ESTILOS GERAIS E FUNDO (Dark Theme)
+   ========================================== */
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #1e1e2f, #12121a);
+    min-height: 100vh;
+    margin: 0;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.divisor {
+    border: 0;
+    height: 1px;
+    background-color: #444;
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* ==========================================
+   2. CABEÇALHO E RODAPÉ DO PORTAL
+   ========================================== */
+.cabecalho-global {
+    text-align: center;
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.cabecalho-global h1 {
+    color: #ffe066;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    margin-top: 0;
+}
+
+.menu-navegacao a {
+    color: #ffe066;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.menu-navegacao a:hover {
+    color: #ff5722;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.rodape-global {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px 0;
+    font-size: 0.9em;
+    color: #888;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.conteudo-principal {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* ==========================================
+   3. BOTÕES GERAIS E NAVEGAÇÃO
+   ========================================== */
+.boas-vindas {
+    text-align: center;
+}
+
+.menu-opcoes {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.menu-opcoes p {
+    margin: 0;
+}
+
+.btn-navegacao, .menu-opcoes a, .link-voltar, .btn-explorar {
+    color: #1e1e2f;
+    background-color: #ffe066;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px;
+    display: inline-block;
+    font-weight: bold;
+    border: 2px solid #cca300;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-navegacao:hover, .menu-opcoes a:hover, .link-voltar:hover, .btn-explorar:hover {
+    background-color: #ffcc00;
+    transform: scale(1.05);
+}
+
+/* ==========================================
+   4. FORMULÁRIO DE CADASTRO
+   ========================================== */
+.formulario-personagem {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.formulario-personagem label {
+    font-weight: bold;
+    color: #ffe066;
+}
+
+.formulario-personagem input[type="text"],
+.formulario-personagem input[type="url"],
+.formulario-personagem textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: #2a2a3d;
+    border: 1px solid #555;
+    color: white;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.grupo-ataque {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn-salvar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: 2px solid #388E3C;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.btn-salvar:hover {
+    background-color: #45a049;
+}
+
+/* ==========================================
+   5. A CARTA (O seu design original)
+   ========================================== */
+.card {
+    background: linear-gradient(to bottom, #ffe066, #ffcc00);
+    border-radius: 10px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+/* Regra para a carta em destaque (Tamanho fixo e animação) */
+.card.unico {
+    width: 320px;
+    margin: 0 auto;
+    animation: color-change 3s infinite;
+}
+
+.card.unico:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+@keyframes color-change {
+    0%   { box-shadow: 0 0 20px rgba(255, 215, 0, 0.6); }
+    50%  { box-shadow: 0 0 40px rgba(255, 87, 34, 1);   }
+    100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.6); }
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name {
+    font-size: 26px;
+    font-weight: bold;
+    color: #222;
+}
+
+.hp {
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+}
+
+.image-box iframe,
+.image-box img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    border: 4px solid #cca300;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.attack, .description {
+    background-color: #ffeba1;
+    border-radius: 10px;
+    padding: 12px 15px;
+}
+
+.attack {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.attack-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #111;
+}
+
+.damage {
+    font-size: 18px;
+    font-weight: bold;
+    color: #a00;
+}
+
+.description {
+    font-size: 14px;
+    color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+/* ==========================================
+   6. A POKÉDEX (A Grade de Coleção)
+   ========================================== */
+.cabecalho-colecao {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.grade-colecao {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    padding: 20px 0;
+}
+
+.link-card-mochila {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    max-width: 320px;
+}
+
+.mini-card {
+    width: 100%;
+    animation: none; /* Remove a animação infinita na grade */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    margin: 0 auto;
+}
+
+.mini-card:hover {
+    animation: color-change 1.5s infinite;
+    transform: translateY(-5px);
+}
+
+.clique-aqui {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 10px;
+    text-decoration: underline;
+}
+
+/* ==========================================
+   7. ALERTAS E TELAS ESPECIAIS
+   ========================================== */
+.alerta-sucesso {
+    background-color: rgba(40, 167, 69, 0.2);
+    color: #4caf50;
+    border: 1px solid #4caf50;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 15px rgba(40, 167, 69, 0.3);
+}
+
+.encontro-selvagem {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: rgba(255, 152, 0, 0.1);
+    border-radius: 10px;
+    border: 2px dashed #ff9800;
+    max-width: 600px;
+    margin: 0 auto;
+}
