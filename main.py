@@ -33,7 +33,7 @@ def cadastro():
 def novo():
     novo_personagem = {
         'nome': request.form['nome'],
-        'cor': '#3498db',  # Uma cor padrão para os novos, ou você pode add um campo de cor no form!
+        'cor': request.form['cor'],  # Uma cor padrão para os novos, ou você pode add um campo de cor no form!
         'hp': request.form['hp'],
         'img': request.form['url'],
         'atk1': request.form['ataque1'], 'dano1': request.form['dano1'],
